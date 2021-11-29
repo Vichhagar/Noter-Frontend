@@ -7,6 +7,28 @@
     font-family: 'Nokio';
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1C547C; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a87be; 
+  }
+
 body {
     overflow: hidden;
     background-color: #CED6E0;
@@ -14,8 +36,8 @@ body {
 
 main {
     background-color: #FFF;
-    border-radius: 10px;
-    max-width: 75%;
+    /* border-radius: 10px; */
+    width: 75%;
     height: 75vh;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -25,16 +47,68 @@ main {
     transform: translateY(-50%);
 }
 
+.main {
+    padding: 1.5rem;
+    overflow-y: scroll;
+    display: block;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-bottom: 4rem;
+}
+
+.header .link a{
+    margin-right: 1rem;
+}
+
+.header img {
+    width: 20%;
+}
+
+.content {
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: 33% 32% 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article {
+    margin: 0.5rem 0;
+    text-align: left;
+    border: #1C547C solid 1px;
+    padding: 0.5rem;
+    transition: border 0.25s;
+}
+
+article:hover {
+    border: #1C547C solid 2px;
+}
+
+article > a {
+    float: right;
+}
+
+
 main .left-section {
     text-align: center;
     align-items: center;
-    position: relative;
-    top: 5%;
-    margin: 6rem;
+    margin: auto 6rem
+}
+
+.registration-page .left-section {
+    top: -3%;
 }
 
 main .left-section img {
     width: 40%;
+}
+
+.registration-page .left-section img {
+    padding-bottom: 1rem;
 }
 
 main .left-section .login-info {
@@ -50,7 +124,7 @@ main .left-section form input {
     border-radius: 0;
     border: #1C547C solid 1px;
     margin: 1rem;
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
     font-size: 1rem;
 }
 
@@ -70,6 +144,7 @@ main .left-section .account-info {
 
 main .right-section {
     background-color: #1C547C;
+    /* border-radius: 10px; */
 }
 
 main .right-section img {
@@ -77,4 +152,33 @@ main .right-section img {
     position: relative;
     top: 20%;
     left: 20%;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bolder;
+}
+
+.add {
+    width: 32%;
+    height: 15vh;
+    margin-bottom: 2rem;
+    border: #1C547C solid 1px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add .plus {
+    font-size: 100px;
+    text-align: center;
+}
+
+.add .state {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
