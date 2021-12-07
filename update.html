@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="./main.css">
+    <title>Noter | Update</title>
+    <script src="https://kit.fontawesome.com/6c2c868cfb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({ 
+        selector:'textarea',
+        menubar: false,
+        plugins: 'code lists',
+        toolbar: 'align underline bold italic code' 
+        });</script>
+</head>
+<body>
+    <main class="main">
+        <div class="header" style="margin-bottom: 2rem;">
+            <a href="./home.html"><img src="./Logo.png" alt="noter logo"></a>
+        </div>
+        <form action="./dashboard.html">
+            <input id="addNote" type="text" placeholder="Title of the Note.">
+            <textarea rows="17" cols="40" placeholder="Write the content of your note here..."></textarea>
+            <input id="makePublic" name="isPublic" type="checkbox" value="true">
+            <label for="isPublic">Public</label>
+            <div class="formButton">
+                <button><i class="fa fa-check" aria-hidden="true"></i></button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>
